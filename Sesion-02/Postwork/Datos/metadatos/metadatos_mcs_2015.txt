@@ -1,0 +1,31 @@
+﻿Identifier: MEX-INEGI.INEGI.ESD3.04-MCS-2015
+
+Title: Módulo de Condiciones Socioeconómicas 2015
+
+Description: INEGI. Módulo de Condiciones Socioeconómicas 2015. SNIEG. Información de Interés Nacional.
+
+El Módulo de Condiciones Socioeconómicas por sus siglas MCS, anexo a la Encuesta Nacional de Ingresos y Gastos de los Hogares (ENIGH) es un esfuerzo conjunto entre el Instituto Nacional de Estadística y Geografía (INEGI) y el Consejo Nacional de Evaluación de la Política de Desarrollo Social (CONEVAL) para proporcionar un panorama estadístico de las variables necesarias para la medición multidimensional de la pobreza, establecidas en la Ley General de Desarrollo Social.
+Su periodicidad es bienal y se cuenta con información a partir del 2008.
+Para este proyecto se han tomado en cuenta las recomendaciones internacionales y los requerimientos de información de los diferentes usuarios, cuidando la comparabilidad histórica. De igual manera se incorporan nuevos productos con el objetivo de adecuarse a los cambios económicos del país y obtener resultados que reflejan la realidad.
+
+Modified: 2016-10-31
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: atencion.usuarios@inegi.org.mx
+
+License: http://www.inegi.org.mx/inegi/terminos.html 
+
+DataDictionary: http://www3.inegi.org.mx/rnm/index.php/catalog/226/data_dictionary?idPro=#page=F4&tab=data-dictionary
+
+Keyword: Ingreso, Hogares, Pobreza
+
+ContactPoint: Lic. José de Jesús Esquivel de la Rosa, 01800 111 4634
+
+Temporal: 2015-02-01-2015-10-31
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: Bienalmente 
+
+Distribution: https://www.inegi.org.mx/programas/mcs/2015/

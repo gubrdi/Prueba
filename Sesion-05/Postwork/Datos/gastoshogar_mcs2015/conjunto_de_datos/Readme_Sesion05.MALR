@@ -1,0 +1,82 @@
+#### (1) Base de Datos
+
+Para consultar la base de datos, usar los siguientes datos:
+*Aquí pongan el nombre de su base de datos y la o las colecciones que crearon.*
+
+```
+Base de datos: Postwork_Proyecto_MALR
+Colección:     gastoshogar
+```
+
+#### (2) Estructura del archivo CSV
+
+*Aquí pongan el header del archivo CSV que usaron como dataset. La idea es que contrasten los documentos cargados en MongoDB con este header para asegurar que la carga fue correcta.*
+
+```
+folioviv, foliohog, clave,tipo_gasto, gasto_nm, gas_nm_tri
+
+..
+
+#### > wc gastoshogar.csv
+####  49598   49598 1673264 gastoshogar.csv
+
+*Aquí pongan las consultas que pensaron y como primera línea pongan con qué la van a ejecutar, es decir, un filtro, proyección, ordenamiento, etc.*
+
+1. ¿cuántos registros se agregaron?
+
+Colección:     gastoshogar.csv
+// PROJECTION
+{"_id":1}
+me mostrará los 49,958 id`s que originalmente se cargaron a Mongo al importar el archivo csv. 
+Después busqué el documento con los títulos que no forman parte de la base y los eliminé 
+```
+
+2. ¿cuántos registros existen por clave de gasto?
+
+*Solución:*
+
+```json
+// AGREGATION
+// Primera capa - por $group
+{
+  _id: "$clave",
+  cve_gasto: {
+    $sum: 1
+  }
+}
+// Segunda capa - $sort
+
+{
+  cve_gasto: -1
+}
+ finalmente cree una vista y la denominé "distribución-clave-gastos" y la exporte a distribución-clave-gastos.csv
+
+
+3. ¿cuál es el nivel de gasto trimestral de las familias encuestadas?
+
+```json
+// AGREGATION
+// Primera capa - por $group
+{
+  _id: "$gas_nm_tri",
+  total_gas_trim: {
+    $sum: 1
+  }
+}// Segunda capa - $sort
+{
+  total_gas_trim: 1
+}
+
+finalmente cree una vista y la denominé "niveles-gastos-trim" y la exporté a niveles-gastos-trim.csv
+
+
+4 . Conclusiones
+
+Al revisar las bases me percaté que al parecer no viene muy limpia la colección de origen 
+fue un buen ejercicio para validar la calidad de lo datos.
+
+
+
+
+
+
